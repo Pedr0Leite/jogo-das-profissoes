@@ -159,20 +159,46 @@ $.getJSON("./assets/data/cardsJSON.json", function (cardsData) {
     gameSetup()
   })
 
-  /*
-  * Difficulty
+
+  /**
+  * Play again
   */
-  let level = 'easy'
-  const cardsByLevel = {
-    easy: 3,
-    medium: 6,
-    hard: 9
-  }
-  const delayByLevel = {
-    easy: 1200,
-    medium: 800,
-    hard: 600
-  }
+  const playAgainButton = document.getElementById('jogar-de-novo')
+  playAgainButton.addEventListener('click', function () {
+    playAgain();
+  })
+
+  /**
+   * Leave Game
+   */
+  const LeaveButton = document.getElementById('sair-do-jogo')
+  LeaveButton.addEventListener('click', function () {
+    playAgain();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  })
+
+  /**
+ * Níveis
+ */
+  const niveisButton = document.getElementById('niveis')
+  niveisButton.addEventListener('click', function () {
+    playAgainLevels();
+  })
+
+/*
+* Difficulty
+*/
+let level = 'easy'
+const cardsByLevel = {
+  easy: 3,
+  medium: 6,
+  hard: 9
+}
+const delayByLevel = {
+  easy: 1200,
+  medium: 800,
+  hard: 600
+}
 
   const difficulty = document.getElementById('difficulty')
   difficulty.addEventListener('click', function (event) {

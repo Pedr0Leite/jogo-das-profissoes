@@ -159,32 +159,6 @@ $.getJSON("./assets/data/cardsJSON.json", function (cardsData) {
     gameSetup()
   })
   
-    /**
-  * Play again
-  */
-  const playAgainButton = document.getElementById('jogar-de-novo')
-  playAgainButton.addEventListener('click', function () {
-    playAgain();
-  })
-
-  /**
-   * Leave Game
-   */
-  const LeaveButton = document.getElementById('sair-do-jogo')
-  LeaveButton.addEventListener('click', function () {
-    playAgain();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  })
-
-  /**
- * Níveis
- */
-  const niveisButton = document.getElementById('niveis')
-  niveisButton.addEventListener('click', function () {
-    playAgainLevels();
-  })
-
-
   /**
   * Play again
   */
